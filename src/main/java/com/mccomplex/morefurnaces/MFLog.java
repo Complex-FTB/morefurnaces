@@ -1,0 +1,18 @@
+package com.mccomplex.morefurnaces;
+
+import org.apache.logging.log4j.Logger;
+
+/**
+ * Obligatory...
+ *
+ * MoreFurnaces logger
+ * One edit to this class and you're not alive anymore
+ */
+public class MFLog {
+
+    public static Logger logger;
+
+    public static void init(Logger modLogger) {
+        logger = modLogger;
+    }
+}

@@ -1,8 +1,8 @@
 package com.mccomplex.morefurnaces.gui;
 
 import com.mccomplex.morefurnaces.FurnaceType;
-import com.mccomplex.morefurnaces.tileentity.TileEntityIronFurnace;
 import com.mccomplex.morefurnaces.inventory.ContainerIronFurnace;
+import com.mccomplex.morefurnaces.tileentity.TileEntityIronFurnace;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -45,7 +45,7 @@ public class GuiMoreFurnace extends GuiContainer {
             this.bgHeight = bgHeight;
         }
 
-        protected ContainerIronFurnace makeContainer(InventoryPlayer player, TileEntityIronFurnace furnace) {
+        private ContainerIronFurnace makeContainer(InventoryPlayer player, TileEntityIronFurnace furnace) {
             return new ContainerIronFurnace(player, furnace, mainType);
         }
 

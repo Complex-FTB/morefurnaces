@@ -1,8 +1,8 @@
 package com.mccomplex.morefurnaces.proxy;
 
 import com.mccomplex.morefurnaces.gui.GuiMoreFurnace;
-import com.mccomplex.morefurnaces.tileentity.TileEntityIronFurnace;
 import com.mccomplex.morefurnaces.inventory.ContainerIronFurnace;
+import com.mccomplex.morefurnaces.tileentity.TileEntityIronFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;

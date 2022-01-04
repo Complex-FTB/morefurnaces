@@ -28,6 +28,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.Random;
 
+@SuppressWarnings({"NullableProblems", "deprecation"})
 public class BlockMoreFurnaces extends Block implements ITileEntityProvider {
     public static final PropertyEnum<FurnaceType> VARIANT = PropertyEnum.create("variant", FurnaceType.class);
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
@@ -78,7 +79,7 @@ public class BlockMoreFurnaces extends Block implements ITileEntityProvider {
         boolean active = false;
 
         TileEntity te = world.getTileEntity(pos);
-        if (te != null && te instanceof TileEntityIronFurnace) {
+        if (te instanceof TileEntityIronFurnace) {
             TileEntityIronFurnace furnace = (TileEntityIronFurnace) te;
             facing = EnumFacing.byIndex(furnace.getFacing());
             if (facing == EnumFacing.DOWN || facing == EnumFacing.UP)

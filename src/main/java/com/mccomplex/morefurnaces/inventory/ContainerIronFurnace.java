@@ -219,18 +219,13 @@ public class ContainerIronFurnace extends Container {
             slot.onSlotChange(stack1, stack);
         } else if (!isInputSlot(index) && !isFuelSlot(index)) {
             if (!FurnaceRecipes.instance().getSmeltingResult(stack1).isEmpty()) {
-                if (!this.mergeItemStack(stack1, 0, type.getFirstFuelSlot(), false))
-                    return true;
+                return !this.mergeItemStack(stack1, 0, type.getFirstFuelSlot(), false);
             } else if (TileEntityFurnace.isItemFuel(stack1)) {
-                if (!this.mergeItemStack(stack1, type.getFirstFuelSlot(), type.getFirstOutputSlot(0), false))
-                    return true;
+                return !this.mergeItemStack(stack1, type.getFirstFuelSlot(), type.getFirstOutputSlot(0), false);
             } else if (index >= type.getNumSlots() && index < type.getNumSlots() + 27) {
-                if (!this.mergeItemStack(stack1, type.getNumSlots() + 27, type.getNumSlots() + 36, false))
-                    return true;
-            } else if (index >= type.getNumSlots() + 27 && index < type.getNumSlots() + 36 && !this.mergeItemStack(stack1, type.getNumSlots(), type.getNumSlots() + 27, false))
-                return true;
-        } else if (!this.mergeItemStack(stack1, type.getNumSlots(), type.getNumSlots() + 36, false))
-            return true;
+                return !this.mergeItemStack(stack1, type.getNumSlots() + 27, type.getNumSlots() + 36, false);
+            } else return index >= type.getNumSlots() + 27 && index < type.getNumSlots() + 36 && !this.mergeItemStack(stack1, type.getNumSlots(), type.getNumSlots() + 27, false);
+        } else return !this.mergeItemStack(stack1, type.getNumSlots(), type.getNumSlots() + 36, false);
 
         return false;
     }

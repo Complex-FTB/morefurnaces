@@ -1,7 +1,7 @@
 package com.mccomplex.morefurnaces.tileentity;
 
-import com.mccomplex.morefurnaces.FurnaceType;
 import com.mccomplex.morefurnaces.Config;
+import com.mccomplex.morefurnaces.FurnaceType;
 import com.mccomplex.morefurnaces.MoreFurnaces;
 import com.mccomplex.morefurnaces.inventory.ItemHandlerFurnace;
 import com.mccomplex.morefurnaces.inventory.ItemHandlerMoveStacks;

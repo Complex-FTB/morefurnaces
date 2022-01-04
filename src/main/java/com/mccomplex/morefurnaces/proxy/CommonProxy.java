@@ -2,10 +2,10 @@ package com.mccomplex.morefurnaces.proxy;
 
 import com.mccomplex.morefurnaces.FurnaceType;
 import com.mccomplex.morefurnaces.MoreFurnaces;
+import com.mccomplex.morefurnaces.blocks.BlockMoreFurnaces;
 import com.mccomplex.morefurnaces.items.ItemMoreFurnaces;
 import com.mccomplex.morefurnaces.items.ItemUpgrade;
 import com.mccomplex.morefurnaces.recipes.Recipes;
-import com.mccomplex.morefurnaces.blocks.BlockMoreFurnaces;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -18,6 +18,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.function.Function;
 
+@SuppressWarnings("deprecation")
 @Mod.EventBusSubscriber(modid = MoreFurnaces.MODID)
 public class CommonProxy {
 

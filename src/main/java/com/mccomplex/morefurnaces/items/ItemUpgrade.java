@@ -4,7 +4,6 @@ import com.mccomplex.morefurnaces.FurnaceType;
 import com.mccomplex.morefurnaces.MoreFurnaces;
 import com.mccomplex.morefurnaces.blocks.BlockMoreFurnaces;
 import com.mccomplex.morefurnaces.tileentity.TileEntityIronFurnace;
-import com.mccomplex.morefurnaces.blocks.BlockMoreFurnaces;
 import net.minecraft.block.BlockFurnace;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -24,6 +23,7 @@ import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
 
+@SuppressWarnings("NullableProblems")
 public class ItemUpgrade extends Item {
     public ItemUpgrade() {
         setTranslationKey("morefurnacesupgrade");
@@ -65,7 +65,7 @@ public class ItemUpgrade extends Item {
 
     private boolean useOnVanillaFurnace(EntityPlayer playerIn, World world, BlockPos pos, ItemStack stack, Upgrades upgrade) {
         TileEntity te = world.getTileEntity(pos);
-        if (te != null && te instanceof TileEntityFurnace) {
+        if (te instanceof TileEntityFurnace) {
             TileEntityFurnace furnace = (TileEntityFurnace) te;
             boolean upgraded = upgradeVanillaFurnace(world, pos, furnace, upgrade.getUpgradedType());
 
@@ -80,7 +80,7 @@ public class ItemUpgrade extends Item {
 
     private boolean useOnModFurnace(EntityPlayer playerIn, World world, BlockPos pos, ItemStack stack, Upgrades upgrade) {
         TileEntity te = world.getTileEntity(pos);
-        if (te != null && te instanceof TileEntityIronFurnace) {
+        if (te instanceof TileEntityIronFurnace) {
             TileEntityIronFurnace furnace = (TileEntityIronFurnace) te;
             FurnaceType furnaceType = furnace.getType();
 

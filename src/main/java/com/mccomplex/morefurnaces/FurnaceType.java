@@ -1,13 +1,9 @@
 package com.mccomplex.morefurnaces;
 
-import com.mccomplex.morefurnaces.tileentity.TileEntityGoldFurnace;
-import com.mccomplex.morefurnaces.tileentity.TileEntityNetherrackFurnace;
-import com.mccomplex.morefurnaces.tileentity.TileEntityObsidianFurnace;
 import com.mccomplex.morefurnaces.tileentity.*;
-import com.mccomplex.morefurnaces.tileentity.TileEntityDiamondFurnace;
-import com.mccomplex.morefurnaces.tileentity.TileEntityIronFurnace;
 import net.minecraft.util.IStringSerializable;
 
+@SuppressWarnings("NullableProblems")
 public enum FurnaceType implements IStringSerializable {
     IRON(2, 2, 2, 1, 150, 1.25f, 84, "Iron Furnace", TileEntityIronFurnace.class),
     GOLD(4, 5, 4, 1, 80, 2.0f, 84, "Gold Furnace", TileEntityGoldFurnace.class),
@@ -61,8 +57,7 @@ public enum FurnaceType implements IStringSerializable {
 
     public static TileEntityIronFurnace makeEntity(int meta) {
         try {
-            TileEntityIronFurnace te = values()[meta].clazz.newInstance();
-            return te;
+            return values()[meta].clazz.newInstance();
         } catch (InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
         }

@@ -24,23 +24,11 @@ public class Recipes {
                 'N', Blocks.NETHERRACK,
                 'F', Blocks.FURNACE);
 
-        // Copper Furnace
-        addShapedRecipe("copper_furnace", getFurnace(COPPER),
-                "CCC", "CFC", "CCC",
-                'C', "ingotCopper",
-                'F', Blocks.FURNACE);
-
         // Iron Furnace
         addShapedRecipe("iron_furnace", getFurnace(IRON),
                 "III", "IFI", "III",
                 'I', "ingotIron",
                 'F', Blocks.FURNACE);
-
-        // Silver Furnace
-        addShapedRecipe("silver_furnace", getFurnace(SILVER),
-                "SSS", "SFS", "SSS",
-                'S', "ingotSilver",
-                'F', getFurnace(IRON));
 
         // Gold Furnace
         addShapedRecipe("gold_furnace", getFurnace(GOLD),
@@ -74,24 +62,6 @@ public class Recipes {
                 "III", "ISI", "III",
                 'I', "ingotIron",
                 'S', Blocks.STONE);
-
-        // Stone to Copper Upgrade
-        addShapedRecipe("stone_to_copper", getUpgrade(STONE_TO_COPPER),
-                "CCC", "CSC", "CCC",
-                'C', "ingotCopper",
-                'S', Blocks.STONE);
-
-        // Iron to Silver Upgrade
-        addShapedRecipe("iron_to_silver", getUpgrade(IRON_TO_SILVER),
-                "SSS", "SIS", "SSS",
-                'S', "ingotSilver",
-                'I', "nuggetIron");
-
-        // Copper to Silver Upgrade
-        addShapedRecipe("copper_to_silver", getUpgrade(COPPER_TO_SILVER),
-                "SSS", "SCS", "SSS",
-                'S', "ingotSilver",
-                'C', "nuggetCopper");
 
         // Iron to Gold Upgrade
         addShapedRecipe("iron_to_gold", getUpgrade(IRON_TO_GOLD),

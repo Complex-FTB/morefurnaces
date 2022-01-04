@@ -60,7 +60,7 @@ public class ContainerIronFurnace extends Container {
                 }
             }
         } else if (type.getNumInputSlots() == 4) {
-            // SILVER, GOLD FURNACE
+            // GOLD FURNACE
             int index = 0;
             for (int slot = 0; slot < type.getNumInputSlots(); slot++) {
                 int x = 62 - 18 * slot;
@@ -81,7 +81,7 @@ public class ContainerIronFurnace extends Container {
                 }
             }
         } else if (type.getNumFuelSlots() < 3) {
-            // IRON, NETHERRACK, COPPER FURNACE
+            // IRON, NETHERRACK FURNACE
             int index = 0;
 
             // Input Slots

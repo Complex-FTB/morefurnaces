@@ -16,9 +16,7 @@ public class GuiMoreFurnace extends GuiContainer {
         GOLD(Textures.GOLD, FurnaceType.GOLD, 166),
         DIAMOND(Textures.DIAMOND, FurnaceType.DIAMOND, 202),
         OBSIDIAN(Textures.OBSIDIAN, FurnaceType.OBSIDIAN, 196),
-        NETHERRACK(Textures.NETHERRACK, FurnaceType.NETHERRACK, 166),
-        COPPER(Textures.COPPER, FurnaceType.COPPER, 166),
-        SILVER(Textures.SILVER, FurnaceType.SILVER, 166);
+        NETHERRACK(Textures.NETHERRACK, FurnaceType.NETHERRACK, 166);
 
         private final ResourceLocation texture;
         private final FurnaceType mainType;
@@ -80,10 +78,8 @@ public class GuiMoreFurnace extends GuiContainer {
             int left, top;
             switch(type) {
                 case IRON:
-                case COPPER:
                 case NETHERRACK:
                     left = 57; top = 37; break;
-                case SILVER:
                 case GOLD:
                     left = 64; top = 37; break;
                 case DIAMOND:
@@ -105,10 +101,8 @@ public class GuiMoreFurnace extends GuiContainer {
                 int left, top;
                 switch (type) {
                     case IRON:
-                    case COPPER:
                     case NETHERRACK:
                         left = 79; top = 35; break;
-                    case SILVER:
                     case GOLD:
                         left = 81; top = 35; break;
                     default: // Diamond

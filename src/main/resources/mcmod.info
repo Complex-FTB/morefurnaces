@@ -1,20 +1,21 @@
 [
   {
     "modid": "morefurnaces",
-    "name": "More Furnaces: Omnifactory Edition",
-    "description": "More Furnaces adds 7 new furnaces made of iron, copper, silver, gold, diamond, obsidian and netherrack to the game. Each has different abilities like more slots, higher smelting speed or dual smelting.",
+    "name": "More Furnaces: Complex Edition",
+    "description": "More Furnaces adds 7 new furnaces made of iron, gold, diamond, obsidian and netherrack to the game. Each has different abilities like more slots, higher smelting speed or dual smelting.",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "url": "https://www.curseforge.com/minecraft/mc-mods/morefurnaces-omnifactory-edition",
+    "url": "https://github.com/Complex-FTB/morefurnaces",
     "authorList": [
       "CubeX2",
       "ALongStringOfNumbers",
       "Eutropium",
       "Exa4096",
       "notmywing",
-      "dan"
+      "dan",
+      "SuperslowJelly"
     ],
-    "credits": "CubeX2 for the original mod, Omnifactory Developers for subsequent maintenance.",
+    "credits": "CubeX2 for the original mod, Omnifactory Developers for subsequent maintenance, and SuperslowJelly/Complex-MC for subsequent slimming.",
     "logoFile": "assets/morefurnaces/textures/icon.png"
   }
 ]
